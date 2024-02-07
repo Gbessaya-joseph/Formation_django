@@ -10,3 +10,11 @@
  {%block h2%}
  abonnez vous svp
  {%endblock%}
+
+  {% block list%}
+      {%for element in list%}
+         <li>{{element|add:"100"}}-----{{nom|capfirst}}</li>
+      {%empty%}
+         <p>liste vide</p>
+ {% endfor %}
+ {% endblock %}

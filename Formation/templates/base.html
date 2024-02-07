@@ -7,14 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-   
-    <nav>
-        <ul>
-            <li><a href="{{index.html}}">Home</a></li>
-            <li><a href="{{Projec.htmlt}}">Projet</a></li>
-            <li><a href="{{Contact.html}}">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+       {% block header %}
+
+        {% endblock %}
+        {%include 'navbar.html'%}
+    </header>
     <h6>{% block content %}
     
     {% endblock %}</h6> 
@@ -25,6 +23,13 @@
         
         {% endblock %}
     </h2>
+
+    <ul>
+        {% block list%}
+
+
+        {% endblock %}
+    </ul>
 
 </body>
 </html>

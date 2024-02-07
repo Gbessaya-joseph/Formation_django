@@ -2,17 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
+
+
 def home(request, *args, **kwargs):
-    name = "joseph"
-    number = 6
-    myList = [33, 44, 55, 66]
-    context = {
-        "name": name,
-        "number": number,
-        "myList": myList 
-    }
-    return render(request, 'index.html', context)
+    myList = [43, 52, 34, 45, 75]
+    nom = "joseph"
+    return render(request, 'index4.html', {"list": myList, "nom": nom})
 
 
-def index(request, *args, **kwargs):
-    return HttpResponse("hello word")
+def contact(request, *args, **kwargs):
+    return render(request, 'Contact.html')
+
+def blog (request, *args, **kwargs):
+    return HttpResponse("blog page")
